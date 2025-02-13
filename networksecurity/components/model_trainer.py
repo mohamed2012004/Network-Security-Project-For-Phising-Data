@@ -106,6 +106,8 @@ class ModelTrainer:
         
         y_train_pred = best_model.predict(X_train)
         classification_train_metric = get_classification_score(y_train, y_train_pred)
+        self.track_mlflow(best_model, classification_train_metric)
+        
             
         y_test_pred = best_model.predict(x_test)
         classification_test_metric = get_classification_score(y_test, y_test_pred)
