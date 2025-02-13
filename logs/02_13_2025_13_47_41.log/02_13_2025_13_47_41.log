@@ -1,0 +1,6 @@
+[ 2025-02-13 13:47:46,843 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-02-13 13:47:46,849 ] 107 dagshub - INFO - Accessing as Nasr201
+[ 2025-02-13 13:47:47,199 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Nasr201/Network-Security-Project-For-Phising-Data "HTTP/1.1 200 OK"
+[ 2025-02-13 13:47:47,561 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-02-13 13:47:47,564 ] 107 dagshub - INFO - Initialized MLflow to track repo "Nasr201/Network-Security-Project-For-Phising-Data"
+[ 2025-02-13 13:47:47,567 ] 107 dagshub - INFO - Repository Nasr201/Network-Security-Project-For-Phising-Data initialized!
