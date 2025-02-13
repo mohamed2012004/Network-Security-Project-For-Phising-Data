@@ -66,10 +66,7 @@ class DataTransformation:
             train_df=DataTransformation.read_data(self.data_validation_artifact.valid_train_file_path)
             test_df=DataTransformation.read_data(self.data_validation_artifact.valid_test_file_path)
 
-            #remove duplicates
-            train_df.drop_duplicates(keep='first',inplace=True)
-            test_df.drop_duplicates(keep='first',inplace=True)
-           
+            
             
             ## training dataframe
             input_feature_train_df=train_df.drop(columns=[TARGET_COLUMN],axis=1)

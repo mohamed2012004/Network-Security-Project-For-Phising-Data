@@ -51,6 +51,7 @@ class DataIngestion:
             raise NetworkSecurityException(e,sys)
     def split_data_as_train_test(self,dataframe: pd.DataFrame):
         try:
+            dataframe.drop_duplicates(keep='first',inplace=True)
             train_set, test_set = train_test_split(
                 dataframe, test_size=self.data_ingestion_config.train_test_split_ratio
             )
