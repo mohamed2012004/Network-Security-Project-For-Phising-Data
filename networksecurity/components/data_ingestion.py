@@ -53,7 +53,7 @@ class DataIngestion:
         try:
             dataframe.drop_duplicates(keep='first',inplace=True)
             train_set, test_set = train_test_split(
-                dataframe, test_size=self.data_ingestion_config.train_test_split_ratio
+                dataframe, test_size=self.data_ingestion_config.train_test_split_ratio,random_state=42
             )
             logging.info("Performed train test split on the dataframe")
 

@@ -1,0 +1,93 @@
+Abnormal_URL:
+  drift_status: false
+  p_value: 0.815372179520942
+DNSRecord:
+  drift_status: false
+  p_value: 0.9650629388137822
+Domain_registeration_length:
+  drift_status: false
+  p_value: 0.9999999985966365
+Favicon:
+  drift_status: false
+  p_value: 0.951678528267444
+Google_Index:
+  drift_status: false
+  p_value: 0.6784342260546901
+HTTPS_token:
+  drift_status: false
+  p_value: 0.7435048684559586
+Iframe:
+  drift_status: false
+  p_value: 1.0
+Links_in_tags:
+  drift_status: false
+  p_value: 0.5713813137457703
+Links_pointing_to_page:
+  drift_status: false
+  p_value: 0.9981095103414463
+Page_Rank:
+  drift_status: false
+  p_value: 0.6709609786296008
+Prefix_Suffix:
+  drift_status: false
+  p_value: 1.0
+Redirect:
+  drift_status: false
+  p_value: 0.9478826388690887
+Request_URL:
+  drift_status: false
+  p_value: 1.0
+Result:
+  drift_status: false
+  p_value: 0.999999788396878
+RightClick:
+  drift_status: false
+  p_value: 1.0
+SFH:
+  drift_status: false
+  p_value: 1.0
+SSLfinal_State:
+  drift_status: false
+  p_value: 1.0
+Shortining_Service:
+  drift_status: false
+  p_value: 0.6897446318748082
+Statistical_report:
+  drift_status: false
+  p_value: 1.0
+Submitting_to_email:
+  drift_status: false
+  p_value: 0.9946133855766554
+URL_Length:
+  drift_status: false
+  p_value: 0.8612423764102224
+URL_of_Anchor:
+  drift_status: false
+  p_value: 0.8034172470436204
+age_of_domain:
+  drift_status: false
+  p_value: 0.9269546179928532
+double_slash_redirecting:
+  drift_status: false
+  p_value: 0.7331831414044072
+having_At_Symbol:
+  drift_status: false
+  p_value: 0.9999493549721139
+having_IP_Address:
+  drift_status: false
+  p_value: 0.999999042347852
+having_Sub_Domain:
+  drift_status: false
+  p_value: 0.8423522384089854
+on_mouseover:
+  drift_status: false
+  p_value: 1.0
+popUpWidnow:
+  drift_status: false
+  p_value: 0.9652649775319767
+port:
+  drift_status: false
+  p_value: 0.9996292828208739
+web_traffic:
+  drift_status: false
+  p_value: 0.16956141276279832
