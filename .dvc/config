@@ -1,0 +1,4 @@
+
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/Nasr201/Network-Security-Project-For-Phising-Data.s3
