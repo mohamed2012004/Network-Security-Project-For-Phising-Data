@@ -1,0 +1,5 @@
+outs:
+- md5: f7ad29d20f133d30d2c2aff8bac6d50c
+  size: 2040
+  hash: md5
+  path: report.yaml
