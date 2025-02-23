@@ -7,10 +7,10 @@ stages:
     - networksecurity/entity/artifact_entity.py
     - networksecurity/exception/exception.py
     - networksecurity/logging/logger.py
-    outs:
-    - Artifacts\02_23_2025_06_56_49\data_ingestion\ingested\train.csv
-    - Artifacts\02_23_2025_06_56_49\data_ingestion\ingested\test.csv
-    - Artifacts\02_23_2025_06_56_49\data_ingestion\feature_store\phisingData.csv
+    # outs:
+    # - Artifacts\02_23_2025_08_59_26\data_ingestion\ingested\train.csv
+    # - Artifacts\02_23_2025_08_59_26\data_ingestion\ingested\test.csv
+    # # - Artifacts\02_23_2025_08_59_26\data_ingestion\feature_store\phisingData.csv
 
 
   validation:
@@ -23,10 +23,10 @@ stages:
     - networksecurity/logging/logger.py
     - networksecurity/utils/main_utils/utils.py
     - networksecurity/constant/training_pipeline
-    outs:
-    - Artifacts/02_23_2025_06_56_49/data_validation/drift_report/report.yaml
-    - Artifacts/02_23_2025_06_56_49/data_validation/validated/test.csv
-    - Artifacts/02_23_2025_06_56_49/data_validation/validated/train.csv
+    # outs:
+    # - Artifacts/02_23_2025_08_59_26/data_validation/drift_report/report.yaml
+    # - Artifacts/02_23_2025_08_59_26/data_validation/validated/test.csv
+    # - Artifacts/02_23_2025_08_59_26/data_validation/validated/train.csv
 
   transformation:
     cmd: python networksecurity/components/data_transformation.py
@@ -39,10 +39,10 @@ stages:
     - networksecurity/utils/main_utils/utils.py
     - networksecurity/constant/training_pipeline
 
-    outs:
-    - Artifacts/02_23_2025_06_56_49/data_transformation/transformed/test.npy
-    - Artifacts/02_23_2025_06_56_49/data_transformation/transformed/train.npy
-    - Artifacts/02_23_2025_06_56_49/data_transformation/transformed_object/preprocessing.pkl
+    # outs:
+    # - Artifacts/02_23_2025_08_59_26/data_transformation/transformed/test.npy
+    # - Artifacts/02_23_2025_08_59_26/data_transformation/transformed/train.npy
+    # - Artifacts/02_23_2025_08_59_26/data_transformation/transformed_object/preprocessing.pkl
 
   training:
     cmd: python networksecurity/components/model_trainer.py
@@ -57,6 +57,5 @@ stages:
     - networksecurity/utils/ml_utils/model/estimator.py
     - networksecurity/utils/ml_utils//metric/classification_metric.py
 
-    outs:
-    - Artifacts/02_23_2025_06_56_49/model_trainer/trained_model/model.pkl
-
+    # outs:
+    # - Artifacts/02_23_2025_08_59_26/model_trainer/trained_model/model.pkl
