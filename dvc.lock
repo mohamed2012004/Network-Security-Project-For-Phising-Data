@@ -3,7 +3,7 @@ stages:
   ingestion:
     cmd: python networksecurity/components/data_ingestion.py
     deps:
-    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+    - path: Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
       hash: md5
       md5: 70bdd9dbbe7f12b02c850e23c2f398e5
       size: 800203
@@ -39,7 +39,7 @@ stages:
   validation:
     cmd: python networksecurity/components/data_validation.py
     deps:
-    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+    - path: Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
       hash: md5
       md5: 70bdd9dbbe7f12b02c850e23c2f398e5
       size: 800203
@@ -88,7 +88,7 @@ stages:
   transformation:
     cmd: python networksecurity/components/data_transformation.py
     deps:
-    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+    - path: Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
       hash: md5
       md5: 70bdd9dbbe7f12b02c850e23c2f398e5
       size: 800203
@@ -137,7 +137,7 @@ stages:
   training:
     cmd: python networksecurity/components/model_trainer.py
     deps:
-    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+    - path: Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
       hash: md5
       md5: 70bdd9dbbe7f12b02c850e23c2f398e5
       size: 800203

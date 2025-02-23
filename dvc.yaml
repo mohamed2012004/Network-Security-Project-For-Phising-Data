@@ -7,7 +7,7 @@ stages:
     - networksecurity/entity/artifact_entity.py
     - networksecurity/exception/exception.py
     - networksecurity/logging/logger.py
-    - Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+    - Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
 
     outs:
     - Artifacts\02_23_2025_10_39_01\data_ingestion\ingested\train.csv:
@@ -26,7 +26,7 @@ stages:
     - networksecurity/logging/logger.py
     - networksecurity/utils/main_utils/utils.py
     - networksecurity/constant/training_pipeline
-    - Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+    - Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
 
     outs:
     - Artifacts/02_23_2025_10_39_01/data_validation/drift_report/report.yaml:
@@ -46,8 +46,7 @@ stages:
     - networksecurity/logging/logger.py
     - networksecurity/utils/main_utils/utils.py
     - networksecurity/constant/training_pipeline
-    - Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
-
+    - Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
 
     outs:
     - Artifacts/02_23_2025_10_39_01/data_transformation/transformed/test.npy:
@@ -69,8 +68,7 @@ stages:
     - networksecurity/utils/main_utils/utils.py
     - networksecurity/utils/ml_utils/model/estimator.py
     - networksecurity/utils/ml_utils//metric/classification_metric.py
-    - Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
-
+    - Artifacts/02_23_2025_10_39_01/data_ingestion/feature_store/phisingData.csv
     outs:
     - Artifacts/02_23_2025_10_39_01/model_trainer/trained_model/model.pkl:
         persist: true
