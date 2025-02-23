@@ -1,0 +1,180 @@
+schema: '2.0'
+stages:
+  ingestion:
+    cmd: python networksecurity/components/data_ingestion.py
+    deps:
+    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+      hash: md5
+      md5: 70bdd9dbbe7f12b02c850e23c2f398e5
+      size: 800203
+    - path: networksecurity/components/data_ingestion.py
+      hash: md5
+      md5: f466e1e128b6a2f4abe8223e99f2b15f
+      size: 3735
+    - path: networksecurity/entity/artifact_entity.py
+      hash: md5
+      md5: 148310218ad481058204b582dfd59c90
+      size: 851
+    - path: networksecurity/entity/config_entity.py
+      hash: md5
+      md5: a6ee7ebd864d5281f8f645c859ece871
+      size: 4486
+    - path: networksecurity/exception/exception.py
+      hash: md5
+      md5: 9437dc096d4ba41716b62d88775347ad
+      size: 791
+    - path: networksecurity/logging/logger.py
+      hash: md5
+      md5: a6fea9ee5cb80fa3c55be0c46e8a964a
+      size: 427
+    outs:
+    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\ingested\test.csv
+      hash: md5
+      md5: 2608a73cd26d6e478e743e02ae77c266
+      size: 85445
+    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\ingested\train.csv
+      hash: md5
+      md5: 04898fe2fc230930e498a7f07ac18dd7
+      size: 341533
+  validation:
+    cmd: python networksecurity/components/data_validation.py
+    deps:
+    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+      hash: md5
+      md5: 70bdd9dbbe7f12b02c850e23c2f398e5
+      size: 800203
+    - path: networksecurity/components/data_validation.py
+      hash: md5
+      md5: 2e8defb797630d6c84eedf54c9e865a2
+      size: 4838
+    - path: networksecurity/constant/training_pipeline
+      hash: md5
+      md5: 4bb9dfafbf668bcbc108ab51a7670293.dir
+      size: 6516
+      nfiles: 3
+    - path: networksecurity/entity/artifact_entity.py
+      hash: md5
+      md5: 148310218ad481058204b582dfd59c90
+      size: 851
+    - path: networksecurity/entity/config_entity.py
+      hash: md5
+      md5: a6ee7ebd864d5281f8f645c859ece871
+      size: 4486
+    - path: networksecurity/exception/exception.py
+      hash: md5
+      md5: 9437dc096d4ba41716b62d88775347ad
+      size: 791
+    - path: networksecurity/logging/logger.py
+      hash: md5
+      md5: a6fea9ee5cb80fa3c55be0c46e8a964a
+      size: 427
+    - path: networksecurity/utils/main_utils/utils.py
+      hash: md5
+      md5: dd96166e4820093a2a813a1df3ae5d0a
+      size: 3624
+    outs:
+    - path: Artifacts/02_23_2025_10_39_01/data_validation/drift_report/report.yaml
+      hash: md5
+      md5: f7ad29d20f133d30d2c2aff8bac6d50c
+      size: 2040
+    - path: Artifacts/02_23_2025_10_39_01/data_validation/validated/test.csv
+      hash: md5
+      md5: 2608a73cd26d6e478e743e02ae77c266
+      size: 85445
+    - path: Artifacts/02_23_2025_10_39_01/data_validation/validated/train.csv
+      hash: md5
+      md5: 04898fe2fc230930e498a7f07ac18dd7
+      size: 341533
+  transformation:
+    cmd: python networksecurity/components/data_transformation.py
+    deps:
+    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+      hash: md5
+      md5: 70bdd9dbbe7f12b02c850e23c2f398e5
+      size: 800203
+    - path: networksecurity/components/data_transformation.py
+      hash: md5
+      md5: 9270bbcf1b3f955605b293cd92f53f91
+      size: 4885
+    - path: networksecurity/constant/training_pipeline
+      hash: md5
+      md5: 4bb9dfafbf668bcbc108ab51a7670293.dir
+      size: 6516
+      nfiles: 3
+    - path: networksecurity/entity/artifact_entity.py
+      hash: md5
+      md5: 148310218ad481058204b582dfd59c90
+      size: 851
+    - path: networksecurity/entity/config_entity.py
+      hash: md5
+      md5: a6ee7ebd864d5281f8f645c859ece871
+      size: 4486
+    - path: networksecurity/exception/exception.py
+      hash: md5
+      md5: 9437dc096d4ba41716b62d88775347ad
+      size: 791
+    - path: networksecurity/logging/logger.py
+      hash: md5
+      md5: a6fea9ee5cb80fa3c55be0c46e8a964a
+      size: 427
+    - path: networksecurity/utils/main_utils/utils.py
+      hash: md5
+      md5: dd96166e4820093a2a813a1df3ae5d0a
+      size: 3624
+    outs:
+    - path: Artifacts/02_23_2025_10_39_01/data_transformation/transformed/test.npy
+      hash: md5
+      md5: 10fe22a201776440cb6124e2b58fb0fa
+      size: 290288
+    - path: Artifacts/02_23_2025_10_39_01/data_transformation/transformed/train.npy
+      hash: md5
+      md5: ad02f63115bf3cb17a0db72fddacbcd6
+      size: 1160520
+    - path: Artifacts/02_23_2025_10_39_01/data_transformation/transformed_object/preprocessing.pkl
+      hash: md5
+      md5: 1c7d0e75fe29c8d48b411e7d4b064919
+      size: 1264583
+  training:
+    cmd: python networksecurity/components/model_trainer.py
+    deps:
+    - path: Artifacts\02_23_2025_10_39_01\data_ingestion\feature_store\phisingData.csv
+      hash: md5
+      md5: 70bdd9dbbe7f12b02c850e23c2f398e5
+      size: 800203
+    - path: networksecurity/components/model_trainer.py
+      hash: md5
+      md5: d1dfb5fd6c35715ccd6a22c5f3f8b64b
+      size: 6451
+    - path: networksecurity/entity/artifact_entity.py
+      hash: md5
+      md5: 148310218ad481058204b582dfd59c90
+      size: 851
+    - path: networksecurity/entity/config_entity.py
+      hash: md5
+      md5: a6ee7ebd864d5281f8f645c859ece871
+      size: 4486
+    - path: networksecurity/exception/exception.py
+      hash: md5
+      md5: 9437dc096d4ba41716b62d88775347ad
+      size: 791
+    - path: networksecurity/logging/logger.py
+      hash: md5
+      md5: a6fea9ee5cb80fa3c55be0c46e8a964a
+      size: 427
+    - path: networksecurity/utils/main_utils/utils.py
+      hash: md5
+      md5: dd96166e4820093a2a813a1df3ae5d0a
+      size: 3624
+    - path: networksecurity/utils/ml_utils//metric/classification_metric.py
+      hash: md5
+      md5: 63945be2f13c9ef535cc5243c47a4497
+      size: 825
+    - path: networksecurity/utils/ml_utils/model/estimator.py
+      hash: md5
+      md5: 8084b30f8daa89c0970c56dffa849b83
+      size: 753
+    outs:
+    - path: Artifacts/02_23_2025_10_39_01/model_trainer/trained_model/model.pkl
+      hash: md5
+      md5: 28754e396958dd8ecc71b62629797e79
+      size: 12139587

@@ -3,3 +3,6 @@
     endpointurl = https://dagshub.com/Nasr201/Network-Security-Project-For-Phising-Data.s3
 ['remote "dagshub"']
     url = https://dagshub.com/Nasr201/Network-Security-Project-For-Phising-Data.dvc
+    auth = basic
+    user = Nasr201
+    password = 19d917108012e0530a55d6284b7b8b617fe91e66
